@@ -2,6 +2,21 @@
 <html>
         <head>
             <title>이규호의 홈페이지</title>
+            <link href="./practice.css" rel="stylesheet", type="text/css">
+
+            <script type="text/javascript">
+                function doSomething(){
+                    let a = document.getElementById('inputA').value;
+                    let b = document.getElementById('inputB').value;
+                    document.getElementById("valueA").innerHTML = a;
+                    document.getElementById("valueB").innerHTML = b;
+                    document.getElementById("valueC").innerHTML = Number(a) + Number(b);
+                }
+
+                function whatTimeIsIT(){
+                    alert(new Date());
+                }
+            </script>
         </head>
         <body>
             <nav>
@@ -10,11 +25,26 @@
                     <a href="./about_me.html">About Me</a>
             </nav>
 
+            <button onclick="whatTimeIsIT()">현재시간</button>
+            <hr/>
+
             <h1>첫 번째 크기 헤드라인</h1>
             <h2>두 번째 크기 헤드라인</h2>
             <h3>세 번째 크기 헤드라인</h3>
             <h4>네 번째 크기 헤드라인</h4>
             <h5>다섯 번째 크기 헤드라인</h5>
+
+            <lable for="inputA">a</lable>
+            <input id="inputA" value=1 onkeyup="doSomething()">
+            <label for="inputB">b</label>
+            <input id="inputB" value=2 onkeyup="doSomething()">
+
+            <p>
+                <span id="valueA">1</span> + <span id="valueB">2</span>
+                = <span id="valueC">3</span>입니다.
+            
+            </p>
+
             <p>문단은 p로 쓰세요. p는 아마 Paragraph의 앞글자를 따온 것이겠죠?</p>
             <a href="https://www.google.com">Go to Google</a>
             <hr/>
