@@ -3,6 +3,16 @@
         <head>
             <title>Blog</title>
             <link href="./practice.css" rel="stylesheet", type="text/css">
+
+            <script>
+                function doSomething(){
+                    let a = document.getElementById("inputA").value;
+                    let b = document.getElementById("inputB").value;
+                    document.getElementById("valueA").innerHTML = a;
+                    document.getElementById("valueB").innerHTML = b;
+                    document.getElementById("valueC").innerHTML = Number(a)+Number(b);
+                }
+            </script>
         </head>
         <body>
             <nav>
@@ -10,6 +20,15 @@
                     <a href="./blog_list.html">Blog</a>
                     <a href="./about_me.html">About Me</a>
             </nav>
+            <label for="inputA">첫 번째 값</label>
+            <input id="inputA", value=100 onkeyup="doSomething()">
+            
+            <label for="inputB">두 번째 값</label>
+            <input id="inputB", value=200 onkeyup="doSomething()">
+
+            <p>
+                <span id="valueA">1</span> + <span id="valueB">2</span> = <span id="valueC">3</span> 입니다.
+            </p>
 
             <h1>Blog</h1>
             <p> 아직 작성하지 않았습니다</p>
